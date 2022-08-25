@@ -36,10 +36,11 @@
       "easycorp/easy-security-bundle": "^1.0",
       "egeloen/ckeditor-bundle": "^4.0",
       "exercise/htmlpurifier-bundle": "^0.2.3",
-      "symfony/web-server-bundle": "^3.3",
       "ninsuo/symfony-collection": "dev-master"
    },
    "require-dev": {
+      "phpstan/phpstan": "^1.8",
+      "rector/rector": "^0.13.9",
       "sensio/generator-bundle": "^3.0",
       "symfony/phpunit-bridge": "^3.0"
    },
@@ -47,7 +48,7 @@
       "post-root-package-install": [
          "SymfonyStandard\\Composer::hookRootPackageInstall"
       ],
-      "post-install-cmd": [
+      "old-post-install-cmd": [
          "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
@@ -58,7 +59,7 @@
          "Fuz\\Symfony\\Collection\\ScriptHandler::postInstall",
          "php app/console assetic:dump web/"
       ],
-      "post-update-cmd": [
+      "old-post-update-cmd": [
          "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
          "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
@@ -72,7 +73,7 @@
    },
    "config": {
        "platform": {
-            "php": "5.5.9"
+            "php": "7.4"
         }
    },
    "extra": {
